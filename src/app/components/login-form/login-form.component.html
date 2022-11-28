@@ -1,0 +1,24 @@
+<form [formGroup]="loginForm" (ngSubmit)="onLoginFormSubmitted(loginForm)">
+
+  <mat-card>
+    <mat-card-title>Login form</mat-card-title>
+    <mat-card-content>
+
+      <div style="display: flex; flex-flow: column nowrap; gap: 1rem;">
+        <mat-form-field appearance="fill">
+          <mat-label>Username</mat-label>
+          <input matInput type="text" placeholder="Username" formControlName="username">
+          <mat-error *ngIf="loginForm.get('username')!.errors?.['required']">username is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="Password" formControlName="password">
+          <mat-error *ngIf="loginForm.get('password')!.errors?.['required']">password is required</mat-error>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

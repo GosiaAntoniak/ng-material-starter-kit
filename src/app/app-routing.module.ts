@@ -6,6 +6,7 @@ import { CryptoChipsComponent } from './components/crypto-chips/crypto-chips.com
 import { ProductTableComponent } from './components/product-table/product-table.component';
 import { CreateProductFormComponent } from './components/create-product-form/create-product-form.component';
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -18,6 +19,8 @@ import { CreateProductFormComponentModule } from './components/create-product-fo
 import { CreateProductFormServiceModule } from './services/create-product-form.service-module';
 import { EmployeeFormComponentModule } from './components/employee-form/employee-form.component-module';
 import { EmployeeFormServiceModule } from './services/employee-form.service-module';
+import { LoginFormComponentModule } from './components/login-form/login-form.component-module';
+import { LoginFormServiceModule } from './services/login-form.service-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -26,8 +29,9 @@ import { EmployeeFormServiceModule } from './services/employee-form.service-modu
     { path: 'cryptoChips', component: CryptoChipsComponent },
     { path: 'productTable', component: ProductTableComponent },
     { path: 'create-productForm', component: CreateProductFormComponent },
-    { path: 'create-employeeForm', component: EmployeeFormComponent }
-  ]), ProductListComponentModule, ProductsServiceModule, CategoriesListComponentModule, CategoriesServiceModule, CryptoChipsComponentModule, CryptoChipsServiceModule, ProductTableComponentModule, ProductTableServiceModule, CreateProductFormComponentModule, CreateProductFormServiceModule, EmployeeFormComponentModule, EmployeeFormServiceModule],
+    { path: 'create-employeeForm', component: EmployeeFormComponent },
+    { path: 'create-loginForm', component: LoginFormComponent }
+  ]), ProductListComponentModule, ProductsServiceModule, CategoriesListComponentModule, CategoriesServiceModule, CryptoChipsComponentModule, CryptoChipsServiceModule, ProductTableComponentModule, ProductTableServiceModule, CreateProductFormComponentModule, CreateProductFormServiceModule, EmployeeFormComponentModule, EmployeeFormServiceModule, LoginFormComponentModule, LoginFormServiceModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
